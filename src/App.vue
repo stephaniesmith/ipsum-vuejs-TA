@@ -1,6 +1,9 @@
 <template>
     <div id="app">
-        <img src="./assets/logo.png">
+        <header>
+            <img src="./assets/logo.png">
+            <h1>Steph Learns Vue!</h1>
+        </header>
         <IpsumList v-bind:selected="selected" v-on:selected="updatedSelected"/>
         <IpsumViewer v-bind:ipsum="selected" />
     </div>
@@ -31,8 +34,21 @@ export default {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+header img {
+    width: 5rem;
+    object-fit: contain;
+    margin-right: 1rem;
+}
+
+header h1 {
+    font-size: 1.25em;
 }
 </style>
