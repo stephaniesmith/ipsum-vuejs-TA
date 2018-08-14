@@ -1,16 +1,16 @@
 <template>
     <div id="ipsumList">
         <h1>Ipsum List</h1>
-        <ul>
-            <li
+        <select v-on:change="$emit('selected', ipsums.filter(({ title }) => title === $event.target.value)[0])"
+>
+            <option
                 v-for="ipsum in ipsums"
                 v-bind:key="ipsum.title"
                 v-bind:class="{ selected: selected === ipsum }"
-                v-on:click="$emit('selected', ipsum)"
             >
                 {{ipsum.title}}
-            </li>
-        </ul>
+            </option>
+        </select>
     </div>
 </template>
 
@@ -27,7 +27,10 @@
 
 <style>
 #ipsumList {
-   background-color: black;
+   background-color: grey;
    color:  white;
+}
+select {
+    background-color: white;
 }
 </style>
