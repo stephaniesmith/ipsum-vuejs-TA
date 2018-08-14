@@ -4,8 +4,10 @@
             <img src="./assets/logo.png">
             <h1>Steph Learns Vue!</h1>
         </header>
-        <IpsumList v-bind:selected="selected" v-on:selected="updatedSelected"/>
-        <IpsumViewer v-bind:ipsum="selected" />
+        <main>
+            <IpsumList v-bind:selected="selected" v-on:selected="updatedSelected"/>
+            <IpsumViewer v-bind:ipsum="selected" />
+        </main>
     </div>
 </template>
 
@@ -40,7 +42,7 @@ export default {
 header {
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: 2rem;
 }
 header img {
     width: 5rem;
@@ -49,6 +51,7 @@ header img {
 }
 
 header h1 {
+    font-weight: bolder;
     font-size: 1.25em;
 }
 </style>
