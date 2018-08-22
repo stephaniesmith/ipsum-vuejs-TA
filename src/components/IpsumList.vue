@@ -1,28 +1,28 @@
 <template>
   <div id="ipsumList">
-    <h1>Ipsum List</h1>
-    <select v-on:change="$emit('selected', ipsums.filter(({ title }) => title === $event.target.value)[0])"
->
-      <option>Select Ipsum</option>
-      <option
+    <ul>
+      <IpsumItem
         v-for="ipsum in ipsums"
-        v-bind:key="ipsum.title"
-        v-bind:class="{ selected: selected === ipsum }"
-    >
-        {{ipsum.title}}
-      </option>
-    </select>
+        :key="ipsum.title"
+        :ipsum="ipsum"
+        :selected="selected"
+        :onSelect="onSelect"
+      />
+    </ul>
   </div>
 </template>
 
 <script>
-    import ipsums from '../data/ipsums';
+    import IpsumItem from './IpsumItem.vue';
 
     export default {
-        data() {
-            return { ipsums };
-        },
-        props: ['selected']
+        // data() {
+        //     return { ipsums };
+        // },
+        props: ['ipsums', 'onSelect', 'selected'],
+        components: {
+            IpsumItem
+        }
     }
 </script>
 
@@ -34,18 +34,5 @@
     color:  white;
     justify-content: space-around;
     margin-bottom: 1.5rem;
-    height: 2rem;
-}
-
-h1 {
-    font-weight: bold;
-    margin: .25em 0;
-}
-
-select {
-    background-color: white;
-    height: fit-content;
-    padding: .25em;
-    text-align-last: center;
 }
 </style>
