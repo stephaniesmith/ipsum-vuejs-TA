@@ -18,12 +18,11 @@
   }
 </script>
 
-<style scoped>
+<style>
   li {
     background-color: white;
     color: black;
     padding: 1em;
     border-radius: .75em;
-    margin: .75em;
   }
 </style>

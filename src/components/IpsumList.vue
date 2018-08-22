@@ -1,6 +1,5 @@
 <template>
-  <div id="ipsumList">
-    <ul>
+    <ul id="ipsumList">
       <IpsumItem
         v-for="ipsum in ipsums"
         :key="ipsum.title"
@@ -9,16 +8,12 @@
         :onSelect="onSelect"
       />
     </ul>
-  </div>
 </template>
 
 <script>
     import IpsumItem from './IpsumItem.vue';
 
     export default {
-        // data() {
-        //     return { ipsums };
-        // },
         props: ['ipsums', 'onSelect', 'selected'],
         components: {
             IpsumItem
@@ -28,11 +23,11 @@
 
 <style>
 #ipsumList {
-    display: flex;
-    align-items: center;
+    padding: 2em;
+    display: grid;
     background-color: grey;
-    color:  white;
-    justify-content: space-around;
     margin-bottom: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
 }
 </style>
