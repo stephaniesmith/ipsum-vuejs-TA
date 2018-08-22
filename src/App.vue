@@ -4,29 +4,16 @@
             <img src="./assets/logo.png">
             <h1>Steph Learns Vue!</h1>
         </header>
-        <main>
-            <IpsumList v-bind:selected="selected" v-on:selected="updatedSelected"/>
-            <IpsumViewer v-bind:ipsum="selected" />
-        </main>
+        <Ipsums/>
     </div>
 </template>
 
 <script>
-import IpsumList from './components/IpsumList.vue'
-import IpsumViewer from './components/IpsumViewer.vue'
+import Ipsums from './components/Ipsums.vue'
 
 export default {
-    data() {
-        return { selected: null };
-    },
     components: {
-        IpsumList,
-        IpsumViewer
-    },
-    methods: {
-        updatedSelected(ipsum) {
-            this.selected = ipsum;
-        }
+        Ipsums
     }
 }
 </script>
