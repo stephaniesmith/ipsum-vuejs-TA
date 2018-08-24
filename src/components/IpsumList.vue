@@ -11,14 +11,14 @@
 </template>
 
 <script>
-    import IpsumItem from './IpsumItem.vue';
+import IpsumItem from './IpsumItem.vue';
 
-    export default {
-        props: ['ipsums', 'onSelect', 'selected'],
-        components: {
-            IpsumItem
-        }
-    }
+export default {
+  props: ['ipsums', 'onSelect', 'selected'],
+  components: {
+    IpsumItem
+  }
+};
 </script>
 
 <style>
