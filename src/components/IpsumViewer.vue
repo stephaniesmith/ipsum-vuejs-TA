@@ -26,6 +26,11 @@ export default {
       editing: false
     };
   },
+  watch: {
+    ipsum(newIpsum, oldIpsum) {
+      if(newIpsum !== oldIpsum) this.editing = false;
+    }
+  },
   components: {
     IpsumDisplay,
     IpsumForm
