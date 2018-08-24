@@ -21,7 +21,7 @@ export default {
         key: this.title,
         title: this.title
       };
-      this.add(newIpsum);
+      this.onAdd(newIpsum);
       this.title = '';
     }
   }

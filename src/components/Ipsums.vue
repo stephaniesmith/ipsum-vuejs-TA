@@ -1,7 +1,9 @@
 <template>
   <div id="ipsums">
     <main>
-      <AddIpsum/>
+      <AddIpsum 
+        :onAdd="handleAdd"
+      />
       <IpsumList 
         :ipsums="ipsums"
         :selected="selectedIpsum"
@@ -34,6 +36,9 @@ export default {
     AddIpsum
   },
   methods: {
+    handleAdd(ipsum) {
+      this.ipsums.push(ipsum);
+    },
     handleSelect(ipsum) {
       this.selectedIpsum = ipsum;
     },
