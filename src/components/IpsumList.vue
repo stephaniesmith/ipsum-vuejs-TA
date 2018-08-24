@@ -2,7 +2,7 @@
     <ul id="ipsumList">
       <IpsumItem
         v-for="ipsum in ipsums"
-        :key="ipsum.title"
+        :key="ipsum.key"
         :ipsum="ipsum"
         :selected="selected"
         :onSelect="onSelect"
