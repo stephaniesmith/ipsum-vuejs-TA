@@ -8,14 +8,14 @@
 </template>
 
 <script>
-  export default {
-    props: ['ipsum', 'selected', 'onSelect'],
-    methods: {
-      handleClick() {
-        this.onSelect(this.ipsum);
-      }
+export default {
+  props: ['ipsum', 'selected', 'onSelect'],
+  methods: {
+    handleClick() {
+      this.onSelect(this.ipsum);
     }
   }
+};
 </script>
 
 <style>
