@@ -9,7 +9,22 @@
 
 <script>
 export default {
-    
+  props: ['onAdd'],
+  data: function() {
+    return {
+      title: ''
+    };
+  },
+  methods: {
+    handleSubmit() {
+      const newIpsum = {
+        key: this.title,
+        title: this.title
+      };
+      this.add(newIpsum);
+      this.title = '';
+    }
+  }
 };
 </script>
 
