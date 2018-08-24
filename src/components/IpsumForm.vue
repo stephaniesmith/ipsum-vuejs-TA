@@ -32,7 +32,7 @@
     </p>
     <p>
       <button type="submit">Update</button>
-      <button type="button" @click="onCancel">Update</button>
+      <button type="button" @click="onCancel">Cancel</button>
     </p>
   </form>
 </template>
@@ -40,6 +40,16 @@
 <script>
 export default {
   props: ['ipsum', 'onUpdate', 'onCancel'],
+  data() {
+    return {
+      title: '',
+      category: '',
+      author: '',
+      authorUrl: '',
+      publishedOn: '',
+      body: ''
+    };
+  },
   created() {
     const ipsum = this.ipsum;
     this.title = ipsum.title;
