@@ -9,13 +9,13 @@
 </template>
 
 <script>
-import Ipsums from './components/Ipsums.vue'
+import Ipsums from './components/Ipsums.vue';
 
 export default {
-    components: {
-        Ipsums
-    }
-}
+  components: {
+    Ipsums
+  }
+};
 </script>
 
 <style>
